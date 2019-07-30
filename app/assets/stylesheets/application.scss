@@ -1,0 +1,29 @@
+@import "bootstrap";
+
+h1{
+	margin-top: 20px;
+}
+
+h5{
+	margin: 0;
+}
+
+.reviews{
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+.card{
+	margin: 10px 10px 0 0;
+}
+
+.card-body{
+	display:flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.cardButtons{
+	margin-top: 20px;
+}

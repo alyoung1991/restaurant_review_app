@@ -1,0 +1,24 @@
+<div class="container">
+	<h1>Restaurants</h1>
+	<%= link_to 'New Review', new_review_path, class: "newReview btn btn-primary" %>
+	<div class="reviews">
+		<% @reviews.each do |review| %>
+			<div class="card bg-light" style="width: 16rem;">
+				<div class="card-header">
+					<h5><%= review.restaurant %></h5>
+				</div>
+				<div class="card-body">
+					<div class="cardInfo">
+						<h6 class="card-subtitle mb-2 text-muted"><%= review.rating %></h6>
+						<p class="card-text"><%= review.review %></p>
+					</div>
+					<div class="cardButtons">
+						<%= link_to 'Edit', edit_review_path(review), class: "btn btn-warning" %>
+						<%= link_to 'Delete', review_path(review), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" %>
+					</div>
+				</div>
+			</div>
+			<br>
+		<% end %>
+	</div>
+</div>
