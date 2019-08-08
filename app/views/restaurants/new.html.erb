@@ -1,0 +1,21 @@
+<div class="container">
+	<h1>Create Restaurant</h1>
+
+	<%= form_for @restaurant do |f| %>
+
+		<div class="form-group">
+			<%= f.label :name, "Name:", class: "col-md-4 control-label" %>
+			<div class="col-md-8">
+			  	<%= f.text_field :name %>
+			</div>
+		</div>
+		<div class="form-group">
+			<%= f.label :address, "Address:", class: "col-md-4 control-label" %>
+			<div class="col-md-8">
+			  	<%= f.text_field :address %>
+			</div>
+		</div>
+
+		<%= f.submit "Create Restaurant", class: "btn btn-default btn-primary" %>
+	<% end %>
+</div>

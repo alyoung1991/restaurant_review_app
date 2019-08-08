@@ -1,0 +1,23 @@
+<div class="container">
+	<h1>Restaurants</h1>
+	<%= link_to 'New Restaurant', new_restaurant_path, class: "newRestaurant btn btn-primary" %>
+	<div class="restaurants">
+		<% @restaurants.each do |restaurant| %>
+			<div class="card bg-light" style="width: 16rem;">
+				<div class="card-header">
+					<h5><%= restaurant.name %></h5>
+				</div>
+				<div class="card-body">
+					<div class="cardInfo">
+						<h6 class="card-subtitle mb-2 text-muted"><%= restaurant.address %></h6>
+					</div>
+					<div class="cardButtons">
+						<%= link_to 'Edit', edit_restaurant_path(restaurant), class: "btn btn-warning" %>
+						<%= link_to 'Delete', restaurant_path(restaurant), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" %>
+					</div>
+				</div>
+			</div>
+			<br>
+		<% end %>
+	</div>
+</div>

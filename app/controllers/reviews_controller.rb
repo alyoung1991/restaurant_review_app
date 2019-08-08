@@ -13,7 +13,7 @@ class ReviewsController < ApplicationController
 
 	def create
 		if Review.create(review_params)
-			redirect_to root_path
+			redirect_to reviews_path
 		else
 			render :new
 		end
@@ -22,7 +22,7 @@ class ReviewsController < ApplicationController
 	def update
 		@review = Review.find(params[:id])
 		if @review.update(review_params)
-			redirect_to root_path
+			redirect_to reviews_path
 		else
 			render :edit
 		end
@@ -31,7 +31,7 @@ class ReviewsController < ApplicationController
 	def destroy
 		@review = Review.find(params[:id])
 		if @review.destroy
-			redirect_to root_path
+			redirect_to reviews_path
 		else
 			render :index
 		end
