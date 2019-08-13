@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RestaurantReviewIv</title>
+    <title>Restaurant Review</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -16,14 +16,14 @@
     <% if alert %>
       <p class="alert alert-danger"><%= alert %></p>
     <% end %>
-    <p class="navbar-text pull-right" style="float: right; padding-right: 20px; text-align: right;">
+    <p class="navbar-text pull-right" style="float: right; padding-right: 20px; text-align: right; color: white">
       <% if user_signed_in? %>
-        Logged in as <strong><%= current_user.email %></strong><br>
-        <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-        <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+        <%= fa_icon "user-circle" %> <strong><%= current_user.email %></strong><br>
+        <%= link_to 'Edit Profile', edit_user_registration_path, :class => 'navbar-link btn btn-secondary' %> 
+        <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link btn btn-outline-light'  %>
       <% else %>
-        <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-        <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+        <%= link_to "Sign Up", new_user_registration_path, :class => 'navbar-link btn-light'  %> |
+        <%= link_to "Login", new_user_session_path, :class => 'navbar-link btn-success'  %>
       <% end %>
     </p>
     <%= yield %>

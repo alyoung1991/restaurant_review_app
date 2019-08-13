@@ -1,4 +1,31 @@
 @import "bootstrap";
+@import "font-awesome";
+
+.background{
+	background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("https://images.unsplash.com/photo-1553639766-450abeeaf06d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+	background-size: cover;
+	height: 100vh;
+}
+
+.landingContent{
+	height: 400px;
+	padding-top: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.landingHeader {
+	margin: 0 auto;
+	font-size: 38px;
+	letter-spacing: 3px;
+	color: white;
+}
+
+.landingBtn {
+	color: white;
+}
 
 h1{
 	margin-top: 20px;
